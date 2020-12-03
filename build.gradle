@@ -1,0 +1,31 @@
+plugins {
+    id "org.springframework.boot" version "2.3.3.RELEASE"
+    id "java"
+}
+
+group "org.example"
+version "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.apache.commons:commons-lang3:3.0")
+    implementation("com.google.protobuf:protobuf-java:3.14.0")
+    implementation("com.googlecode.protobuf-java-format:protobuf-java-format:1.4")
+    implementation("org.springframework.boot:spring-boot-starter-web:2.4.0")
+    implementation("org.springframework:spring-context:4.1.0.RELEASE")
+    implementation("org.springframework:spring-test:4.1.0.RELEASE")
+    implementation("org.apache.httpcomponents:httpclient:4.5.13")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.0.1")
+    implementation("org.springframework.boot:spring-boot-starter-actuator:2.4.0")
+    implementation 'junit:junit:4.12'
+    testCompile("io.rest-assured:rest-assured:3.0.0")
+    testCompile("org.springframework.boot:spring-boot-starter-test:2.4.0")
+    testCompile("org.junit.jupiter:junit-jupiter:5.4.0")
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package planets;
+
+option java_package = "com.fr.planet";
+option java_outer_classname = "NumbersTraining";
+
+message Numbers {
+  repeated int32 number = 1;
+}

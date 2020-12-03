@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package planets;
+
+option java_package = "com.fr.planet";
+option java_outer_classname = "PlanetsTraining";
+
+message Planets {
+  repeated Planet Planet = 1;
+}
+
+message Planet {
+  int32 id = 1;
+  string name = 2;
+  repeated Satellite satellite = 3;
+}
+
+message Satellite {
+  int32 id = 1;
+  string name = 2;
+}
